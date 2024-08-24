@@ -44,7 +44,7 @@ class _TaskDetailsPageState extends State<TaskDetailsPage> {
     return Consumer<MyProvider>(
       builder: (context, provider, _) {
         return PopScope(
-          onPopInvokedWithResult: (didPop, result) {
+          onPopInvoked: (didPop) {
             if (didPop) {
               // Trier les tâches
               ProviderService().sortTasks(context);
